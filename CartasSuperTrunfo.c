@@ -12,9 +12,14 @@ int main() {
     char codigo[10];
     char nome[50];
     int populacao;
-    float area;
     float pib;
+    float area;
     int pontosTuristicos;
+    float Desnsidade;
+    float PIBpercapita;
+
+    //Apenas um titulo
+    printf("*** Cadastro de Cartas ***\n");
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -32,15 +37,23 @@ int main() {
     printf("Insira o número de pontos turísticos da cidade:\n");
     scanf("%d", &pontosTuristicos);
 
+    //Calculo da Densidade Populacional e PIB per capita
+    Desnsidade = populacao / area;
+    PIBpercapita = pib / populacao;
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("\n*** Dados da Carta ***\n");
     printf("Código da cidade: %s\n", codigo);
     printf("Nome da cidade: %s\n", nome);
     printf("População da cidade: %d\n", populacao);
-    printf("Área da cidade: %.2f\n", area);
-    printf("PIB da cidade: %.2f\n", pib);
+    printf("Área da cidade: %.2fkm²\n", area);
+    printf("PIB da cidade: R$%.2f\n", pib);
     printf("Número de pontos turísticos da cidade: %d\n", pontosTuristicos);
+    printf("Densidade populacional: %.2f hab/km²\n", Desnsidade);
+    printf("PIB per capita: R$%.2f\n", PIBpercapita);
 
+    // Fim, nao sei como farei a dificuldade Mestre
     return 0;
 }
