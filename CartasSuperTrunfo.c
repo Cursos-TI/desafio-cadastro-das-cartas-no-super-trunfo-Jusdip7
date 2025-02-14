@@ -6,6 +6,51 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste larissa
 
+//Uma função para cadastrar a segunda carta
+void cadastroCartas() {
+    char codigo2[10];
+    char nome2[50];
+    int populacao2;
+    float pib2;
+    float area2;
+    int pontosTuristicos2;
+    float densidade2;
+    float PIBpercapita2;
+
+    printf("Insira o código da cidade:\n");
+    scanf("%s", codigo2);
+    printf("Insira o nome da cidade:\n");
+    scanf("%s", nome2);
+    printf("Insira a população da cidade:\n");
+    scanf("%d", &populacao2);
+    printf("Insira a área da cidade:\n");
+    scanf("%f", &area2);
+    printf("Insira o PIB da cidade:\n");
+    scanf("%f", &pib2);
+    printf("Insira o número de pontos turísticos da cidade:\n");
+    scanf("%d", &pontosTuristicos2);
+
+    densidade2 = populacao2 / area2;
+    PIBpercapita2 = pib2 / populacao2;
+
+    printf("\n*** Dados da Carta-%s***\n", codigo2);
+    printf("Código da cidade: %s\n", codigo2);
+    printf("Nome da cidade: %s\n", nome2);
+    printf("População da cidade: %d\n", populacao2);
+    printf("Área da cidade: %.2fkm²\n", area2);
+    printf("PIB da cidade: R$%.2f\n", pib2);
+    printf("Número de pontos turísticos da cidade: %d\n", pontosTuristicos2);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per capita: R$%.2f\n", PIBpercapita2);
+
+
+}
+
+//Função de comparaçao de cartas. Como a farei? Sei la, só fé.
+void compararCartas() {
+    
+}
+
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
@@ -15,7 +60,7 @@ int main() {
     float pib;
     float area;
     int pontosTuristicos;
-    float Desnsidade;
+    float Densidade;
     float PIBpercapita;
 
     //Apenas um titulo
@@ -38,22 +83,35 @@ int main() {
     scanf("%d", &pontosTuristicos);
 
     //Calculo da Densidade Populacional e PIB per capita
-    Desnsidade = populacao / area;
+    Densidade = populacao / area;
     PIBpercapita = pib / populacao;
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("\n*** Dados da Carta ***\n");
+    printf("\n*** Dados da Carta-%s***\n", codigo);
     printf("Código da cidade: %s\n", codigo);
     printf("Nome da cidade: %s\n", nome);
     printf("População da cidade: %d\n", populacao);
     printf("Área da cidade: %.2fkm²\n", area);
     printf("PIB da cidade: R$%.2f\n", pib);
     printf("Número de pontos turísticos da cidade: %d\n", pontosTuristicos);
-    printf("Densidade populacional: %.2f hab/km²\n", Desnsidade);
+    printf("Densidade populacional: %.2f hab/km²\n", Densidade);
     printf("PIB per capita: R$%.2f\n", PIBpercapita);
 
-    // Fim, nao sei como farei a dificuldade Mestre
+    //Cadastro da segunda carta
+    char opcao[5];
+    printf("Deseja cadastrar outra carta? (s/n)\n");
+    scanf("%s", &opcao);
+
+    if (opcao[0] == 's' || opcao[0] == 'S') {
+        cadastroCartas();
+    } else {
+        printf("Cadastro encerrado.\n");
+    }
+
+    //Comparação de cartas (Tentarei. Conseguirei?)
+    
+
     return 0;
 }
