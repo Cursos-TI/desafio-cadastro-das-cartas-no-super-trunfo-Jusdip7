@@ -9,7 +9,7 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    char estado;
+    char estado[10];
     char codigo[10];
     char nome[50];
     int populacao;
@@ -29,19 +29,19 @@ int main() {
     printf("*** Cadastro da Primeira Carta ***\n");
     
     printf("Insira a letra que represente o estado da cidade:\n");
-    scanf("%s", estado);
+    scanf(" %c", estado);
     printf("Insira o código da cidade:\n");
-    scanf("%s", codigo);
+    scanf(" %s", codigo);
     printf("Insira o nome da cidade:\n");
-    scanf("%s", nome);
+    scanf(" %s", nome);
     printf("Insira a população da cidade:\n");
-    scanf("%d", &populacao);
+    scanf(" %d", &populacao);
     printf("Insira a área da cidade em km²:\n");
-    scanf("%f", &area);
+    scanf(" %f", &area);
     printf("Insira o PIB da cidade:\n");
-    scanf("%f", &pib);
+    scanf(" %f", &pib);
     printf("Insira o número de pontos turísticos da cidade:\n");
-    scanf("%d", &pontosTuristicos);
+    scanf(" %d", &pontosTuristicos);
 
     //Calculo da Densidade Populacional e PIB per capita e super
     Densidade = populacao / area;
@@ -66,7 +66,7 @@ int main() {
 
     //Cadastro da segunda carta
 
-    char estado2;
+    char estado2[10];
     char codigo2[10];
     char nome2[50];
     int populacao2;
@@ -80,19 +80,19 @@ int main() {
     printf("\n*** Cadastro da Segunda Carta ***\n");
 
     printf("Insira a letra que represente o estado da cidade:\n");
-    scanf("%s", estado2);
+    scanf(" %c", estado2);
     printf("Insira o código da cidade:\n");
-    scanf("%s", codigo2);
+    scanf(" %s", codigo2);
     printf("Insira o nome da cidade:\n");
-    scanf("%s", nome2);
+    scanf(" %s", nome2);
     printf("Insira a população da cidade:\n");
-    scanf("%d", &populacao2);
+    scanf(" %d", &populacao2);
     printf("Insira a área da cidade em km²:\n");
-    scanf("%f", &area2);
+    scanf(" %f", &area2);
     printf("Insira o PIB da cidade:\n");
-    scanf("%f", &pib2);
+    scanf(" %f", &pib2);
     printf("Insira o número de pontos turísticos da cidade:\n");
-    scanf("%d", &pontosTuristicos2);
+    scanf(" %d", &pontosTuristicos2);
 
     densidade2 = populacao2 / area2;
     PIBpercapita2 = pib2 / populacao2;
@@ -115,12 +115,20 @@ int main() {
     printf("\n*** Comparação de Cartas ***\n");
     printf("Obs: Nas vitórias, o valor '1' representa a Carta-%s e o valor '0' representa a Carta-%s\n", codigo, codigo2);
 
-    printf("População: %d\n", populacao > populacao2);
-    printf("Área: %d\n", area > area2);
-    printf("PIB: %d\n", pib > pib2);
-    printf("Pontos Turísticos: %d\n", pontosTuristicos > pontosTuristicos2);
-    printf("Densidade Populacional: %d\n", Densidade > densidade2);
-    printf("PIB per capita: %d\n", PIBpercapita > PIBpercapita2);
-    printf("Super: %d\n", Super1 > Super2);
+    printf("\nPopulação da Carta-%s: %d  População da Carta-%s: %d\n", codigo, populacao, codigo2, populacao2);
+    printf("Vencedor: %d\n", populacao > populacao2);
+    printf("-Area da Carta-%s: %.3f  Area da Carta-%s: %.3f\n", codigo, area, codigo2, area2);
+    printf("Vencedor: %d\n", area > area2);
+    printf("-PIB da Carta-%s: %.2f  PIB da Carta-%s: %.2f\n", codigo, pib, codigo2, pib2);
+    printf("Vencedor: %d\n", pib > pib2);
+    printf("-Pontos Turísticos da Carta-%s: %d  Pontos Turísticos da Carta-%s: %d\n", codigo, pontosTuristicos, codigo2, pontosTuristicos2);
+    printf("Vencedor: %d\n", pontosTuristicos > pontosTuristicos2);
+    printf("-Densidade Populacional da Carta-%s: %.2f  Densidade Populacional da Carta-%s: %.2f\n", codigo, Densidade, codigo2, densidade2);
+    printf("Vencedor: %d\n", Densidade < densidade2);
+    printf("-PIB per capita da Carta-%s: %.2f  PIB per capita da Carta-%s: %.2f\n", codigo, PIBpercapita, codigo2, PIBpercapita2);
+    printf("Vencedor: %d\n", PIBpercapita > PIBpercapita2);
+    printf("-Super da Carta-%s: %.2f  Super da Carta-%s: %.2f\n", codigo, Super1, codigo2, Super2);
+    printf("Vencedor: %d\n", Super1 > Super2);    
+   
     return 0;
 }
