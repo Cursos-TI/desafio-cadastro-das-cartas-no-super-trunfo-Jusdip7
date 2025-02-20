@@ -116,19 +116,19 @@ int main() {
     printf("Obs: Nas vitórias, o valor '1' representa a Carta-%s e o valor '0' representa a Carta-%s\n", codigo, codigo2);
 
     printf("\nPopulação da Carta-%s: %d  População da Carta-%s: %d\n", codigo, populacao, codigo2, populacao2);
-    printf("Vencedor: %d\n", populacao > populacao2);
+    printf("Vencedor: (%d)\n", populacao > populacao2);
     printf("-Area da Carta-%s: %.3f  Area da Carta-%s: %.3f\n", codigo, area, codigo2, area2);
-    printf("Vencedor: %d\n", area > area2);
+    printf("Vencedor: (%d)\n", area > area2);
     printf("-PIB da Carta-%s: %.2f  PIB da Carta-%s: %.2f\n", codigo, pib, codigo2, pib2);
-    printf("Vencedor: %d\n", pib > pib2);
+    printf("Vencedor: (%d)\n", pib > pib2);
     printf("-Pontos Turísticos da Carta-%s: %d  Pontos Turísticos da Carta-%s: %d\n", codigo, pontosTuristicos, codigo2, pontosTuristicos2);
-    printf("Vencedor: %d\n", pontosTuristicos > pontosTuristicos2);
+    printf("Vencedor: (%d)\n", pontosTuristicos > pontosTuristicos2);
     printf("-Densidade Populacional da Carta-%s: %.2f  Densidade Populacional da Carta-%s: %.2f\n", codigo, Densidade, codigo2, densidade2);
-    printf("Vencedor: %d\n", Densidade < densidade2);
+    printf("Vencedor: (%d)\n", Densidade < densidade2);
     printf("-PIB per capita da Carta-%s: %.2f  PIB per capita da Carta-%s: %.2f\n", codigo, PIBpercapita, codigo2, PIBpercapita2);
-    printf("Vencedor: %d\n", PIBpercapita > PIBpercapita2);
+    printf("Vencedor: (%d)\n", PIBpercapita > PIBpercapita2);
     printf("-Super da Carta-%s: %.2f  Super da Carta-%s: %.2f\n", codigo, Super1, codigo2, Super2);
-    printf("Vencedor: %d\n", Super1 > Super2);    
+    printf("Vencedor: (%d)\n", Super1 > Super2);    
    
     return 0;
 }
